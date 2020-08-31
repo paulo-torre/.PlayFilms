@@ -27,30 +27,34 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    // const URL_TOP = 'https://localhost:8080/categorias';
-    // fetch(URL_TOP)            
-    //   .then(async (respostaDoServidor) => {
-    //     const resposta = await respostaDoServidor.json();
-    //     setCategorias([
-    //       ...resposta,
-    //     ]);
-    //   });
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://devsoutinhoflix.herokuapp.com/categorias';
+    fetch(URL_TOP)
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
+        setCategorias([
+          ...resposta,
+        ]);
+      });
 
-    setTimeout(() => {
-      setCategorias([
-        ...categorias,
-          {
-            "id": 1,
-            "nome": "Front",
-            "descricao": "qualquer coisa"
-          },
-          {
-            "id": 2,
-            "nome": "Back End",
-            "descricao": "qualquer outra coisa"
-          },
-      ]);
-    }, 1 * 1000);
+    // setTimeout(() => {
+    //   setCategorias([
+    //     ...categorias,
+    //     {
+    //       id: 1,
+    //       nome: 'Front End',
+    //       descricao: 'Uma categoria bacanudassa',
+    //       cor: '#cbd1ff',
+    //     },
+    //     {
+    //       id: 2,
+    //       nome: 'Back End',
+    //       descricao: 'Outra categoria bacanudassa',
+    //       cor: '#cbd1ff',
+    //     },
+    //   ]);
+    // }, 4 * 1000);
   }, []);
 
   return(
@@ -63,6 +67,8 @@ function CadastroCategoria() {
           ...categorias,
           values
         ]);
+
+        setValues(valoresIniciais);
       }}>
 
         <FormField 

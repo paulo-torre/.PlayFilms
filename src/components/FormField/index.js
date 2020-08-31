@@ -11,8 +11,8 @@ const FormFieldWrapper = styled.div`
 
 const Label = styled.label``;
 Label.Text = styled.span`
-  color: lightgray;
-  height: 57px;
+  color: #bbbbbb;
+  height: 55px;
   position: absolute;
   top: 0px;
   left: 17px;
@@ -23,20 +23,20 @@ Label.Text = styled.span`
   transform-origin: 0% 0%;
   font-size: 22px;
   font-style: normal;
-  font-weight: thin;
   transition: .1s ease-in-out;
 `;
 
 const Input = styled.input`
   background: #53585D;
-  color: white;
+  color: whitesmoke;
   display: block;
   width: 95%;
   height: 57px;
   font-size: 18px;
 
   outline: 0;
-  border: 0; 
+  border: 0;
+  border-top: 10px solid #53585D; 
   border-bottom: 3px solid #53585D;
 
   padding: 16px 16px;
@@ -51,12 +51,12 @@ const Input = styled.input`
   }
 
   &:focus + span {
-    transform: scale(.6) translateY(-12px);
+    transform: scale(.7) translateY(-10px);
   }
 
   ${({ hasValue }) => hasValue && css`
     & + span {
-      transform: scale(.6) translateY(-12px);
+      transform: scale(.7) translateY(-10px);
     }
   `}
 `;
