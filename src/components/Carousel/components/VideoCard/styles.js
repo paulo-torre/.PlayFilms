@@ -6,17 +6,17 @@ export const VideoCardContainer = styled.a`
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
-  color: white;
   width: 298px;
   height: 168px;
   background-image: ${({ url }) => `url(${url})`};
   background-size: cover;
   background-position: center;
-  border-radius: 7px;
+  border-radius: 5px;
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 16px;
+  border: transparent;
 
   &:hover {
     opacity: .7;
@@ -24,6 +24,6 @@ export const VideoCardContainer = styled.a`
   }
   
   &:not(:first-child) {
-    margin-left: 20px;
+    margin-left: 30px;
   }
 `;

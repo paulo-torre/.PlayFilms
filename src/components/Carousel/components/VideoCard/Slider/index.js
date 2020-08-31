@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Container = styled.ul`
   padding: 0;
-  margin: 0;
+  margin: 0px;
   .slick-prev,
   .slick-next {
     z-index: 50;
@@ -20,20 +20,19 @@ const Container = styled.ul`
   }
   
   .slick-prev {
-    left: 0;
+    position: absolute;
+    display: block; 
   }
   .slick-next {
-    right: 16px;
+    margin-right: 0;
   }
 `;
 
 export const SliderItem = styled.li`
   margin-right: 16px;
   img {
-    margin: 16px;
     width: 298px;
     height: 197px;
-    object-fit: cover;
   }
 `;
 
@@ -43,7 +42,8 @@ const Slider = ({ children }) => (
     <SlickSlider {...{
       dots: true,
       infinite: true,
-      speed: 240,
+      speed: 210,
+      arrows: true,
       centerMode: false,
       variableWidth: true,
       adaptiveHeight: true,

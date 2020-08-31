@@ -208,3 +208,25 @@ body {
   font-size: 17px;
   padding: 17px 24px;
 }
+
+.ButtonCadastrar {
+  color: white;
+  border: 1px solid white;
+  box-sizing: border-box;
+  background: #1818188e;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 17px 24px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  outline: none;
+  text-decoration: none;
+  display: inline-block;
+}
+.ButtonCadastrar:hover {
+  background: rgba(0, 0, 0, 0.712);
+  transition: background .4s;
+  font-size: 17px;
+  padding: 16px 22px;
+}

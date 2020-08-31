@@ -1,0 +1,14 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "Front",
+      "descricao": "qualquer coisa"
+    },
+    {
+      "id": 2,
+      "nome": "Back End",
+      "descricao": "qualquer outra coisa"
+    }
+  ]
+}
