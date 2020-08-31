@@ -14,8 +14,8 @@ Label.Text = styled.span`
   color: lightgray;
   height: 57px;
   position: absolute;
-  top: 0;
-  left: 14px;
+  top: 0px;
+  left: 17px;
   
   display: flex;
   align-items: center;
